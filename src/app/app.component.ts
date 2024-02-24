@@ -33,7 +33,7 @@ export class AppComponent {
 
   filtroPorTexto: String = ''
 
-  removeAccents(str:any):String {
+  removeAccents(str:String):String {
     return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 
   }
