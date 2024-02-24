@@ -47,5 +47,6 @@ export class AppComponent {
       return contato.nome.toLowerCase().startsWith(letra)
   })
   }
+  
 
 }
