@@ -43,7 +43,7 @@ export class AppComponent {
 }
 
   filtrarContatosPorLetraInicial(letra:string) : Contato[] {
-    return this.contatos.filter( contato => {
+    return this.filtrarContatosPorTexto().filter( contato => {
       return contato.nome.toLowerCase().startsWith(letra)
   })
   }
