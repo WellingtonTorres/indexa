@@ -30,8 +30,11 @@ export class FormularioContatoComponent {
   }
 
   salvarContato() {
-    //if(this.contatoForm.valid)
-    console.log(this.contatoForm.value);
+    if(this.contatoForm.valid) {
+      
+      console.log(this.contatoForm.value);
+    }
+    
 }
 
   cancelar() {
