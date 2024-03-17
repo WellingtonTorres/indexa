@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+// Boa prática, separar importacoes padroes angular
 import { FormularioContatoComponent } from './paginas/formulario-contato/formulario-contato.component';
 import { ListaContatosComponent } from './paginas/lista-contatos/lista-contatos.component';
 
@@ -10,7 +11,8 @@ import { ListaContatosComponent } from './paginas/lista-contatos/lista-contatos.
   imports: [
     CommonModule,
     FormularioContatoComponent,
-    ListaContatosComponent
+    ListaContatosComponent,
+    RouterOutlet
 
   ],
   templateUrl: './app.component.html',
