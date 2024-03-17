@@ -7,6 +7,12 @@
             <img src="assets/adicionar-contato.png" alt="">
             <h1>Adicionar contato</h1>
         </section>
+        <section class="adicionar-contato">
+            <button [routerLink]="['/formulario']" routerLinkActive="router-link-active" >
+              <img src="assets/plus.png">
+              <span>Adicionar Contato</span>
+            </button>
+          </section>
     </header>
 
     <form [formGroup]="contatoForm" (ngSubmit)="salvarContato()">
