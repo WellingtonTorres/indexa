@@ -1,13 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
+
 import { CabecalhoComponent } from '../../componentes/cabecalho/cabecalho.component';
 import { ContainerComponent } from '../../componentes/container/container.component';
 import { ContatoComponent } from '../../componentes/contato/contato.component';
 import { SeparadorComponent } from '../../componentes/separador/separador.component';
 import { FormularioContatoComponent } from '../formulario-contato/formulario-contato.component';
-import agenda from '../../agenda.json'
-import { RouterLink } from '@angular/router';
+
+import { ContatoService } from '../../services/contato.service';
 
 interface Contato{
   id: number
@@ -33,9 +35,13 @@ interface Contato{
 })
 export class ListaContatosComponent {
   alfabeto: string = 'abcdefghijklmnopqrstuvwxyz'
-  contatos: Contato[] = agenda;
+  contatos: Contato[] = [];
 
   filtroPorTexto: String = ''
+
+  constructor(private contatoService: ContatoService) {
+    this.contatos = this.contatoService.obterContatos()
+  }
 
   removeAccents(str:String):String {
     return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
