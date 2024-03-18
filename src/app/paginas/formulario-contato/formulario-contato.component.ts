@@ -22,7 +22,11 @@ export class FormularioContatoComponent implements OnInit {
   contatoForm!: FormGroup;
   
 
-  constructor() {
+  ngOnInit() {
+    this.inicializarFormulario();
+  }
+
+  inicializarFormulario() {
     this.contatoForm = new FormGroup({
       nome: new FormControl('', Validators.required),
       telefone: new FormControl('', Validators.required),
@@ -32,10 +36,6 @@ export class FormularioContatoComponent implements OnInit {
       observacoes: new FormControl('')
     })
   }
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
-
   salvarContato() {
     // if (this.contatoForm.valid) {
     //   console.log(this.contatoForm.get('email')?.errors);
