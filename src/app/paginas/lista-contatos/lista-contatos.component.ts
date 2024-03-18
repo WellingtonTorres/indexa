@@ -9,6 +9,8 @@ import { ContatoComponent } from '../../componentes/contato/contato.component';
 import { SeparadorComponent } from '../../componentes/separador/separador.component';
 import { FormularioContatoComponent } from '../formulario-contato/formulario-contato.component';
 import { ContatoService } from '../../services/contato.service';
+import agenda from '../../agenda.json'
+
 
 interface Contato {
   id: number
@@ -35,6 +37,7 @@ interface Contato {
 })
 export class ListaContatosComponent implements OnInit{
   alfabeto: string = 'abcdefghijklmnopqrstuvwxyz'
+  //contatos: Contato[] = agenda;
   contatos: Contato[] = [];
 
   filtroPorTexto: string = ''
