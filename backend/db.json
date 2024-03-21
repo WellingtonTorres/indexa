@@ -3,7 +3,7 @@
     {
       "nome": "Maria",
       "telefone": "99 99999999",
-      "email": "maria@email.com",
+      "email": "maria@gmaill.com",
       "aniversario": "1995-06-01",
       "redes": "",
       "observacoes": "",
@@ -17,6 +17,15 @@
       "redes": "",
       "observacoes": "",
       "id": 2
+    },
+    {
+      "nome": "Wellington Junior Torres de Melo",
+      "telefone": "11999341522",
+      "email": "wellingtontorresmelo@gmail.com",
+      "aniversario": "1995-09-18",
+      "redes": "www.linkedin.com/in/wellington-torres-79208158",
+      "observacoes": "",
+      "id": 3
     }
   ]
 }
