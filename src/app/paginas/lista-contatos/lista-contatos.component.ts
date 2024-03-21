@@ -26,8 +26,7 @@ import { PerfilContatoComponent } from "../perfil-contato/perfil-contato.compone
         ContatoComponent,
         FormsModule,
         FormularioContatoComponent,
-        RouterLink,
-        PerfilContatoComponent
+        RouterLink
     ]
 })
 export class ListaContatosComponent implements OnInit{
