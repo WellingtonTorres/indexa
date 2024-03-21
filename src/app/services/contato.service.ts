@@ -28,5 +28,10 @@ export class ContatoService {
     const url = `${this.API}/${id}`
     return this.http.get<Contato>(url)
   }
+  excluirContato(id: number): Observable<Contato> {
+    const url = `${this.API}/${id}`
+    return this.http.delete<Contato>(url)
+  }
 
+  
 }
