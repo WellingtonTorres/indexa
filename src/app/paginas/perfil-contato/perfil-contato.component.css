@@ -112,6 +112,9 @@ header .cabecalho-link {
     background-color: #FFFFFF;
     border: 1px solid #0D6EFD;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     }
   
     .botao-editar {
