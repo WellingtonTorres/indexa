@@ -27,6 +27,11 @@
                 (change)="aoSelecionarArquivo($event)"
             >
         </div>
+        @if(contatoForm.get('avatar')?.value !== '') {
+            <figure>
+                <img [src]="contatoForm.get('avatar')?.value" alt="Avatar do Contato">
+            </figure>
+        }
         <label for="nome">Nome</label>
         <input type="text" id="nome" placeholder="Digite o nome do contato" formControlName="nome" />
         @if (contatoForm.get('nome')?.errors && contatoForm.get('nome')?.touched ) { 

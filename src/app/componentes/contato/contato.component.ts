@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -13,5 +13,6 @@ import { RouterLink } from '@angular/router';
 export class ContatoComponent {
   @Input() nome: string = ''
   @Input() telefone: string = ''
-  @Input() id?: number;
+  @Input() id?: number
+  @Input() avatar: string | ArrayBuffer = ''
 }
