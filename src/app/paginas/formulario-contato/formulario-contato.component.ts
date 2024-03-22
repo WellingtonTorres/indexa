@@ -5,19 +5,21 @@ import { SeparadorComponent } from '../../componentes/separador/separador.compon
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { ContatoService } from '../../services/contato.service';
+import { MensagemErroComponent } from "../../componentes/mensagem-erro/mensagem-erro.component";
 
 @Component({
-  selector: 'app-formulario-contato',
-  standalone: true,
-  imports: [
-    CommonModule,
-    ContainerComponent,
-    SeparadorComponent,
-    ReactiveFormsModule,
-    RouterLink
-  ],
-  templateUrl: './formulario-contato.component.html',
-  styleUrl: './formulario-contato.component.css'
+    selector: 'app-formulario-contato',
+    standalone: true,
+    templateUrl: './formulario-contato.component.html',
+    styleUrl: './formulario-contato.component.css',
+    imports: [
+        CommonModule,
+        ContainerComponent,
+        SeparadorComponent,
+        ReactiveFormsModule,
+        RouterLink,
+        MensagemErroComponent
+    ]
 })
 export class FormularioContatoComponent implements OnInit {
   contatoForm!: FormGroup;
@@ -45,6 +47,14 @@ export class FormularioContatoComponent implements OnInit {
       redes: new FormControl(''),
       observacoes: new FormControl('')
     })
+  }
+
+  obterControle(nome: string): FormControl {
+    const control = this.contatoForm.get(nome)
+    if (!control) {
+      throw new Error('Controle de formulario nao encontrado: ' + nome)
+    }
+    return control as FormControl //usando o CASTING do typeScript
   }
 
   carregarContato() {
