@@ -4,6 +4,7 @@ import { Contato } from '../../componentes/contato/contato';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { ContatoService } from '../../services/contato.service';
+import { SeparadorComponent } from '../../componentes/separador/separador.component';
 
 @Component({
     selector: 'app-perfil-contato',
@@ -13,7 +14,8 @@ import { ContatoService } from '../../services/contato.service';
     imports: [
       CommonModule,
       ContainerComponent,
-      RouterLink
+      RouterLink,
+      SeparadorComponent
     ]
 })
 //ciclo de vida onInit

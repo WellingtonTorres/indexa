@@ -61,7 +61,7 @@ header .cabecalho-link {
     .perfil {
     background: #E7F1FF;
     width: 416px;
-    height: 548px;
+    /* height: 548px; */
     padding: 24px, 16px;
     border-radius: 16px;
     }
@@ -94,6 +94,7 @@ header .cabecalho-link {
     justify-content: space-between;
     margin: 0 16px;
     gap: 16px;
+    padding-bottom: 32px;
     }
   
     .botao-excluir, .botao-editar {
