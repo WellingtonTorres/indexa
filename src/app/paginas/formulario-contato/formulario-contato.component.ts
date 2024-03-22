@@ -6,6 +6,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { ContatoService } from '../../services/contato.service';
 import { MensagemErroComponent } from "../../componentes/mensagem-erro/mensagem-erro.component";
+import { CabecalhoComponent } from "../../componentes/cabecalho/cabecalho.component";
 
 @Component({
     selector: 'app-formulario-contato',
@@ -18,7 +19,8 @@ import { MensagemErroComponent } from "../../componentes/mensagem-erro/mensagem-
         SeparadorComponent,
         ReactiveFormsModule,
         RouterLink,
-        MensagemErroComponent
+        MensagemErroComponent,
+        CabecalhoComponent
     ]
 })
 export class FormularioContatoComponent implements OnInit {

@@ -1,4 +1,12 @@
 <app-container>
+
+    <app-cabecalho 
+    [bannerSrc]="'assets/logo.png'"
+    [titulo]="'Adicionar contato'"
+    >
+  </app-cabecalho>
+
+<!-- 
     <header>
         <section class="cabecalho-link">
           <img src="assets/logo.png" alt="">
@@ -13,7 +21,7 @@
           <img src="assets/adicionar-contato.png" alt="">
           <h1>Adicionar contato</h1>
         </section>
-      </header>
+      </header> -->
 
     <form [formGroup]="contatoForm" (ngSubmit)="salvarContato()">
         <div role="button" class="imagem-contato">
@@ -50,8 +58,6 @@
         <input type="email" id="email" placeholder="Digite o e-mail do contato" formControlName="email" />
         <app-mensagem-erro [control]="obterControle('email')"></app-mensagem-erro>
 
-
-        <app-separador></app-separador>
         <label for="aniversario">Aniversário</label>
         <input type="date" id="aniversario" placeholder="Data de nascimento" formControlName="aniversario" />
         <label for="redes">Redes sociais</label>
